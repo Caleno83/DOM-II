@@ -28,7 +28,7 @@ busImg.addEventListener("mouseup", () => {
     console.log("mouse going up, and size image getting big");
     busImg.style.width = "150%";
     busImg.style.opacity = "100%";
-});
+})
 
 const introTitle = document.querySelector(".intro h2");
 //click
@@ -37,10 +37,25 @@ introTitle.addEventListener("click", () => {
     introTitle.style.color = "red";
 });
 
+//stopPropagation with two similar events
+const textTitle = document.querySelector(".content-section h2");
+textTitle.addEventListener("click", (e) => {
+    console.log("second");
+    textTitle.style.color = "yellow"
+    e.stopPropagation();
+});
+
+const textTitleRev = document.querySelector(" .inverse-content h2");
+textTitleRev.addEventListener("click", (e) => {
+    console.log("third");
+    textTitleRev.style.color = "blue";
+    e.stopPropagation();
+});
+
 const imgContent = document.querySelector(".content-section img");
 //dblclick
 imgContent.addEventListener("dblclick",() => {
-    imgContent.style.transform = "scale(1.3)";
+    imgContent.style.transform = "scale(1.2)";
 });
 
 
