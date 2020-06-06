@@ -15,6 +15,13 @@ document.querySelectorAll("nav a").forEach((navbars) => {
     });
 });
 
+//prevent default
+document.querySelectorAll("nav a").forEach((navbar) => {
+navbar.addEventListener("click", (e) => {
+    e.preventDefault();
+    });
+});
+
 const busImg = document.querySelector(".intro img");
 //mousemove
 busImg.addEventListener("mousemove", () => {
