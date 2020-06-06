@@ -71,6 +71,7 @@ const imgContentRev = document.querySelector(".inverse-content img");
 imgContentRev.addEventListener("drag", () => {
     imgContentRev.style =  "border-radius: 50%; border: 2px solid red";
 });
+//dragend
 imgContentRev.addEventListener("dragend", () => {
     imgContentRev.style = "border-radius: 1%;"
 });
